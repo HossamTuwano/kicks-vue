@@ -1,13 +1,13 @@
 <script setup>
 import { userImageStore } from '@/stores/product'
-import { onMounted } from 'vue'
 
 let imageLink = userImageStore()
-let img
 
-onMounted(() => {
-  img = imageLink.images[0]
-})
+
+
+let imageUrl = imageLink.images[0]
+
+
 
 
 </script>
@@ -16,7 +16,7 @@ onMounted(() => {
   <div class="col-1-of-2">
     <div class="product__images--main u-margin-bottom-small">
       <div class="product__images-big">
-        <img :src="img" alt="sneaker img" class="product__images-big image-big" />
+        <img ref="imag" :src="imageUrl" alt="sneaker img" class="product__images-big image-big" />
       </div>
     </div>
 

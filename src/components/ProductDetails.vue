@@ -1,4 +1,8 @@
-<script setup></script>
+<script setup>
+import { useCartStore } from '@/stores/product'
+
+const cartStore = useCartStore()
+</script>
 
 <template>
   <div class="col-1-of-2">
@@ -22,14 +26,18 @@
 
         <div class="product__details-cart">
           <div class="product-quantity u-margin-right-small">
-            <button class="product-quantity-minus button" id="minus">-</button>
-            <input type="text" class="product-quantity-value" value="1" />
-            <button class="product-quantity-add button" id="add">+</button>
+            <button class="product-quantity-minus button" id="minus" @click="cartStore.decrement">
+              -
+            </button>
+            <input type="text" class="product-quantity-value" v-model="cartStore.quantity" />
+            <button class="product-quantity-add button" id="add" @click="cartStore.increment">
+              +
+            </button>
           </div>
 
           <button class="add-to-cart">
             <span class="cart-icon u-margin-right-small"
-              ><img class="cart-icon" src="massets/images/icon-cart.svg" alt="cart-icon"
+              ><img class="cart-icon" src="../assets/images/icon-cart.svg" alt="cart-icon"
             /></span>
             <span>Add to cart</span>
           </button>
