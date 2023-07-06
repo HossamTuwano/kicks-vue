@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&display=swap');
+
+@import '../styles/abstracts/variable';
+
+// ABSTRACTS
+@import '../styles/abstracts/mixins';
+
+// COMPONENTS
+@import '../styles/components/product';
+
+@import '@/styles/components/grid';
+@import '@/styles/components/cart';
+
+// BASE
+@import '@/styles/base/base';
+@import '@/styles/base/typography';
+@import '@/styles/base/utilities';
+
+// IMAGES
+@import '@/styles/pages/home';
+
+

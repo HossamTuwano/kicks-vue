@@ -1,0 +1,116 @@
+body {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 2.6rem;
+  line-height: 1.7;
+  color: #dadde2;
+  box-sizing: border-box;
+}
+
+.header {
+  &__item:not(.header__logo) {
+    font-size: 1.5rem;
+    padding-top: 1.5rem;
+  }
+
+  &__logo {
+    font-weight: 900;
+    text-transform: capitalize;
+    color: $text-color-dark;
+  }
+
+  &__link {
+    &:visited,
+    &:link {
+      text-decoration: none;
+      text-transform: capitalize;
+      color: inherit;
+    }
+  }
+}
+
+.section-product {
+  font-size: 1.5rem;
+}
+
+.product__brand,
+.product__price-discount {
+  color: $color-primary-dark;
+  text-transform: uppercase;
+}
+
+.product__info {
+  font-size: 1.3rem;
+}
+
+.product__name,
+.product__price-value {
+  color: $text-color-dark;
+  font-weight: 700;
+  font-size: 3.5rem;
+  text-transform: capitalize;
+}
+
+.product__price-now {
+  display: flex;
+  align-items: center;
+}
+
+.product__price-value {
+  font-weight: 700;
+  font-size: 2.1rem;
+}
+
+.product__price-discount {
+  background-color: $color-primary-light-2;
+  padding: 0.1rem 0.9rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 4px;
+  vertical-align: center;
+}
+
+.product__price-then {
+  color: $color-grey-light;
+  text-decoration-line: line-through;
+}
+
+.product-quantity {
+  &-minus,
+  &-add,
+  &-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  &-minus,
+  &-add {
+    color: $color-primary-dark;
+    cursor: pointer;
+  }
+
+  &-value {
+    width: 150%;
+    text-align: center;
+  }
+}
+
+.add-to-cart {
+  text-transform: none;
+}
+
+.section-cart {
+  .cart-empty {
+    &__heading {
+      color: $text-color-dark;
+      font-size: 1.3rem;
+    }
+
+    &__body__text {
+      font-size: 1.35rem;
+      font-weight: 700;
+      text-align: center;
+      color: $text-color-dark-2;
+    }
+  }
+}

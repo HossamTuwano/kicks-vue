@@ -1,0 +1,37 @@
+.section-cart {
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  top: 80px;
+  right: -55px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+
+  .cart-empty {
+    &__heading {
+      border-bottom: 1px solid $color-grey-light;
+      padding: 10px 20px;
+    }
+
+    &__body {
+      height: 155px;
+      position: relative;
+
+      &__text {
+        position: absolute;
+        top: 49%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  .cart-list {
+    display: none;
+  }
+}
+
+.show-cart {
+  display: none;
+}

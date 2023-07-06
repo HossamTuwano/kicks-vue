@@ -1,0 +1,93 @@
+.section-product {
+}
+
+.product__images {
+  //   background-color: $color-grey-light;
+
+  &--main {
+    border-radius: 9px;
+    height: 35rem;
+    width: 87%;
+    overflow: hidden;
+    background-color: $color-grey-light;
+  }
+
+  &-big {
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--image {
+    background-color: $color-grey-light;
+    border-radius: 9px;
+    height: 8rem;
+    overflow: hidden;
+  }
+}
+
+.sneaker-image__extra {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.product-details {
+  height: 47.8rem;
+  position: relative;
+
+  &__container {
+    @include center__horizontal__vertical;
+    width: 90%;
+  }
+}
+
+.product__details-cart {
+  display: flex;
+}
+
+.product-quantity {
+  display: flex;
+  align-items: center;
+  background-color: $color-grey-light-2;
+  width: 30%;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-radius: 7px;
+
+  &-minus,
+  &-add,
+  &-value {
+    outline: none;
+    border: none;
+    width: 100%;
+    background: none;
+  }
+
+  &-minus,
+  &-add {
+    color: $color-primary-dark;
+    cursor: pointer;
+  }
+
+  &-value {
+    width: 150%;
+    text-align: center;
+  }
+}
+
+.add-to-cart {
+  display: flex;
+  align-items: center;
+  background-color: $color-primary-dark;
+  padding: 0 4rem;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  color: $color-white;
+  cursor: pointer;
+}
