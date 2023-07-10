@@ -14,7 +14,6 @@ const cartItem = useStoreAddToCart()
         <p class="cart-empty__body__text">Your cart is empty</p>
       </div>
       <div class="cart-items" v-if="cartItem.cart.length > 0">
-        <pre>{{ cartItem.cart.length }}</pre>
         <div v-for="item of cartItem.cart[0]" :key="item">
           <div class="cart-item">
             <div class="cart-item__left">
