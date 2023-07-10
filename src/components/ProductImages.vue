@@ -2,21 +2,17 @@
 import { userImageStore } from '@/stores/product'
 
 let imageLink = userImageStore()
-
-
-
-let imageUrl = imageLink.images[0]
-
-
-
-
 </script>
 
 <template>
   <div class="col-1-of-2">
     <div class="product__images--main u-margin-bottom-small">
       <div class="product__images-big">
-        <img ref="imag" :src="imageUrl" alt="sneaker img" class="product__images-big image-big" />
+        <img
+          src="../assets/images/image-product-1.jpg"
+          alt="sneaker img"
+          class="product__images-big image-big"
+        />
       </div>
     </div>
 
@@ -32,7 +28,7 @@ let imageUrl = imageLink.images[0]
           <img class="sneaker-image__extra" src="../assets/images/image-product-3.jpg" alt="" />
         </div>
         <div class="col-1-of-4 product__images--image">
-          <img class="sneaker-image__extra" src="../assets/images/image-product-4.jpg" alt="" />
+          <img class="sneaker-image__extra" src="@/assets/images/image-product-4.jpg" alt="" />
         </div>
       </div>
     </div>

@@ -1,4 +1,7 @@
-<script setup></script>
+<script setup>
+import { useShowCartStore } from '@/stores/cart'
+const showCart = useShowCartStore()
+</script>
 <template>
   <header>
     <div class="header">
@@ -25,7 +28,9 @@
         </ul>
         <ul class="header__menu--right">
           <li class="u-margin-right-small header__menu--cart">
-            <i class="cart__icon"><img src="../assets/images/icon-cart.svg" alt="" /></i>
+            <i class="cart__icon"
+              ><img src="../assets/images/icon-cart.svg" alt="" @click="showCart.showCart"
+            /></i>
           </li>
           <li class="header__menu__shape">
             <img

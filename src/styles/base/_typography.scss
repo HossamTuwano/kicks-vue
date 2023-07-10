@@ -1,5 +1,5 @@
 body {
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-weight: 400;
   font-size: 2.6rem;
   line-height: 1.7;
@@ -112,5 +112,14 @@ body {
       text-align: center;
       color: $text-color-dark-2;
     }
+  }
+}
+
+.cart-item {
+  &__name {
+    font-size: 1.5rem;
+  }
+  &__price {
+    font-size: 0.8rem;
   }
 }

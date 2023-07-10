@@ -1,7 +1,10 @@
 <script setup>
-import { useCartStore } from '@/stores/product'
+import { useCartStore, useStoreProduct, useStoreAddToCart } from '@/stores/product'
 
+const product = useStoreProduct()
 const cartStore = useCartStore()
+const addToCart = useStoreAddToCart()
+
 </script>
 
 <template>
@@ -11,17 +14,18 @@ const cartStore = useCartStore()
         <h3 class="product__brand">Nike</h3>
         <div class="product__name u-margin-bottom-small">vans</div>
         <div class="product__info u-margin-bottom-small">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam pariatur corrupti aperiam
-          quia unde perferendis corporis porro modi eum sapiente.
+          {{ product.product[0].details }}
         </div>
         <div class="product__price-box">
           <div class="product__price-now">
-            <span class="product__price-value u-margin-right-small" id="product-price"
-              >$125.00</span
-            >
-            <span class="product__price-discount">50%</span>
+            <span class="product__price-value u-margin-right-small" id="product-price">{{
+              product.product[0].price
+            }}</span>
+            <span class="product__price-discount">{{ product.product[0].discount }}</span>
           </div>
-          <p class="product__price-then u-margin-bottom-small">$250.00</p>
+          <p class="product__price-then u-margin-bottom-small">
+            {{ product.product[0].priceThen }}
+          </p>
         </div>
 
         <div class="product__details-cart">
@@ -35,7 +39,7 @@ const cartStore = useCartStore()
             </button>
           </div>
 
-          <button class="add-to-cart">
+          <button class="add-to-cart" @click="addToCart.addCart">
             <span class="cart-icon u-margin-right-small"
               ><img class="cart-icon" src="../assets/images/icon-cart.svg" alt="cart-icon"
             /></span>
