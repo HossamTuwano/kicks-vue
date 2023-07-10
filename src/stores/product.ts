@@ -43,7 +43,7 @@ export const useStoreProduct = defineStore('product', () => {
 export const useStoreAddToCart = defineStore('addToCart', () => {
   const product = useStoreProduct().product
   const quantity = useCartStore().quantity
-  const cart = reactive([])
+  const cart: any[] = reactive([])
   function addCart() {
     for (let i = quantity; i <= quantity; i++) {
       console.log(quantity)

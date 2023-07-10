@@ -4,7 +4,6 @@ import { useStoreAddToCart } from '@/stores/product'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 const show = useShowCartStore()
 const cartItem = useStoreAddToCart()
-console.log(cartItem.cart[0])
 </script>
 
 <template>
